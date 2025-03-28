@@ -5,18 +5,23 @@ body
     align-items: center;
     background-color: #cae2ff;
 }
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: flex-start;
+
+}
 .card
 {
-    display: inline-block; /* Отображение в строку */
-    margin-right: 30px;    /* Отступ между блоками (по желанию) */
-    margin-top: 20px;
-    width: 300px;
-    height: 450px;
+    flex: none; /* Предотвращает изменение размеров flex-элемента */
+    width: 300px; /* Фиксированная ширина */
+    height: 450px; /* Фиксированная высота */
     border-radius: 30px;
-    padding: 20px;                       /* Внутренний отступ */
-    background: linear-gradient(145deg, #a7caf8, #1542b8); /* Градиентный фон */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Тень */
-    transition: transform 0.3s ease;     /* Плавное увеличение */
+    padding: 20px;
+    background: linear-gradient(145deg, #a7caf8, #1542b8);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
 /* Анимация при наведении */
@@ -24,6 +29,7 @@ body
     transform: scale(1.05); /* Увеличение на 5% */
     background: linear-gradient(145deg, #c2f8a7, #15b818);/* Поднимается при наведении */
 }
+
 
 .card_photo
 {

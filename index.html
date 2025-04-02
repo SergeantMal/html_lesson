@@ -1,47 +1,152 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Урок VD02</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Урок VD03</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-<div class="cards-container">
-    <div class="card">
-        <div class="card_photo">
-            <img src="images/man1.jpg"/>
-        </div>
-        <div class="text">
-            <h2>Иван Иванов</h2>
-            <p><strong>Email:</strong> ivan@example.com</p>
-            <p><strong>Дата рождения:</strong> 12 марта 1990</p>
-            <p><strong>Город:</strong> Москва</p>
-        </div>
-    </div>
 
-    <div class="card">
-        <div class="card_photo">
-            <img src="images/man2.jpg"/>
+    <!-- Шапка -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Урок <strong>VD03</strong></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="http://prostyakov-sergey.ru">Главная</a></li>
+                    <li class="nav-item"><a class="nav-link" href="CV.html">О нас</a></li>
+                    <li class="nav-item"><a class="nav-link" href="CV.html">Контакты</a></li>
+                </ul>
+            </div>
         </div>
-        <div class="text">
-            <h2>Петр Сидоров</h2>
-            <p><strong>Email:</strong> petr@example.com</p>
-            <p><strong>Дата рождения:</strong> 04 января 2001</p>
-            <p><strong>Город:</strong> Воркута</p>
-        </div>
-    </div>
+    </nav>
 
-    <div class="card">
-        <div class="card_photo">
-            <img src="images/woman1.jpg"/>
+    <!-- Основной контент -->
+    <div class="container mt-4">
+
+        <!-- Секция 1: Слайдер -->
+        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner" style="max-height: 400px; overflow: hidden;">
+                <div class="carousel-item active">
+                    <img src="images/flat-lay-business-concept.jpg" class="d-block w-100 h-100" alt="Фото 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/marketing-market-strategy-planning-business-concept.jpg" class="d-block w-100 h-100" alt="Фото 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/two-business-people-standing-server-room-with-laptop-discussing.jpg.crdownload" class="d-block w-100 h-100" alt="Фото 3">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
         </div>
-        <div class="text">
-            <h2>Ольга Воробьева</h2>
-            <p><strong>Email:</strong> olga@example.com</p>
-            <p><strong>Дата рождения:</strong> 29 июня 1995</p>
-            <p><strong>Город:</strong> Екатеринбург</p>
+
+        <!-- Секция 2: Карточки -->
+        <div class="row mt-4">
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <img src="images/man1.jpg" class="card-img-top" alt="Карточка 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Иван Иванов</h5>
+                        <p class="card-text">
+                          <p><strong>Email:</strong> ivan@example.com</p>
+                          <p><strong>Дата рождения:</strong> 12 марта 1990</p>
+                          <p><strong>Город:</strong> Москва</p>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <img src="images/man2.jpg" class="card-img-top" alt="Карточка 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Петр Сидоров</h5>
+                        <p class="card-text">
+                          <p><strong>Email:</strong> petr@example.com</p>
+                          <p><strong>Дата рождения:</strong> 04 января 2001</p>
+                          <p><strong>Город:</strong> Воркута</p>
+                      </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <img src="images/woman1.jpg" class="card-img-top" alt="Карточка 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Ольга Воробьева</h5>
+                        <p class="card-text">
+                          <p><strong>Email:</strong> olga@example.com</p>
+                          <p><strong>Дата рождения:</strong> 29 июня 1995</p>
+                          <p><strong>Город:</strong> Екатеринбург</p>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Секция 3: Аккордеон -->
+        <div class="accordion" id="accordionExample">
+            <!-- Иван Иванов -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Иван Иванов
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        Опытный инженер, увлеченный новыми технологиями. Любит решать сложные задачи, путешествовать и изучать историю.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Петр Сидоров -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Петр Сидоров
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        Талантливый маркетолог, который всегда находит нестандартные решения. Увлекается бегом, чтением бизнес-книг и кулинарией.
+                    </div>
+                </div>
+            </div>
+
+    <!-- Ольга Воробьева -->
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Ольга Воробьева
+            </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                Креативный дизайнер с чувством стиля. Обожает рисовать, создавать уют в доме и экспериментировать с модой.
+            </div>
         </div>
     </div>
 </div>
+
+    <!-- Футер -->
+    <footer class="bg-dark text-white text-center p-3 mt-4">
+        <p>Контактная информация: email@example.com</p>
+        <div>
+            <a href="https://www.facebook.com/DerSergeant" class="text-white me-3">Facebook</a>
+            <a href="#" class="text-white me-3">Twitter</a>
+            <a href="#" class="text-white">Instagram</a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
